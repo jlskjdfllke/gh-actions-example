@@ -20,5 +20,5 @@ jobs:
     - run: ls -l deploy
     - uses: actions/upload-artifact@v4
       with:
-        name: Package
-        path: deploy
+        name: my-java-app
+        path: deploy/*
