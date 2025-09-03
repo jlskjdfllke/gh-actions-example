@@ -19,3 +19,6 @@ runs:
     - name: execute checkstyle
       shell: bash
       run: mvn checkstyle:check
+    - name: run unit tests
+      shell: bash
+      run: mvn test
