@@ -1,0 +1,9 @@
+name: Build Java App
+run-name: Build Java App run name
+on: [push]
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cd java-app
+      - run: mvnw clean package
