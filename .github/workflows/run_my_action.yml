@@ -5,6 +5,7 @@ jobs:
   the-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/code-quality-java/action.yml
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/code-quality-java
         with:
           who-to-greet: "World"
