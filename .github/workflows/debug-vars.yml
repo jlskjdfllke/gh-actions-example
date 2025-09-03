@@ -28,6 +28,11 @@ jobs:
       - name: Print the final value
         run: echo "Final MY_VAR value is $MY_VAR"  # And there?
 
+      - name: Print the Variable again after setting the var in the step
+        env:
+          MY_VAR: "🟡 Step Level Value"
+        run: echo "MY_VAR is $MY_VAR" # What do we print?
+
       - name: Print Secret-Based Variable
         run:
           echo "Final Secret Value is ${{ secrets.MY_VAR }}"  # And there?
