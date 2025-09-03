@@ -1,0 +1,21 @@
+name: Code quality
+description: A GitHub Action for checking Java code quality
+
+inputs:
+  who-to-greet: # id of input
+    description: Who to greet
+    required: true
+    default: World
+
+runs:
+  using: composite
+  steps:
+    - run: echo "Hello ${{ inputs.who-to-greet }}"
+    - uses: actions/checkout@v5
+    - uses: actions/setup-java@v4
+      with:
+        java-version: "21"
+        distribution: "temurin"
+    - name: execute checkstyle
+      shell: bash
+      run: mvn --version
