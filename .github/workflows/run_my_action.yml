@@ -5,6 +5,6 @@ jobs:
   the-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/code-quality-java
+      - uses: ./.github/actions/code-quality-java/action.yml
         with:
           who-to-greet: "World"
