@@ -1,0 +1,8 @@
+name: multiple-trigger
+run-name: multiple-trigger
+on: [label, pull_request]
+jobs:
+  My-First-Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "there was a label"
