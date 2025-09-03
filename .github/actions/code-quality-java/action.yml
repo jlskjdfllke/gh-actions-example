@@ -17,7 +17,7 @@ runs:
         distribution: "temurin"
     - name: execute checkstyle
       shell: bash
-      run: mvn -f ${{ inputs.pom_path }} checkstyle:check
+      run: mvn -f ${{ inputs.pom_path }} checkstyle:checkstyle
     - name: run unit tests
       shell: bash
       run: mvn -f ${{ inputs.pom_path }} test
