@@ -1,5 +1,5 @@
 name: test my action
-on: workflow_dispatch
+on: [workflow_dispatch, push]
 
 jobs:
   the-job:
