@@ -5,12 +5,9 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v5
-          with:
-            fetch-depth: 2
-        - run: git checkout HEAD^
-        - run: pwd
-        - run: ls -l
-        - run: cd java-app
-        - run: ls -l
-        - run: ./mvnw clean package
+    - uses: actions/checkout@v5
+    - uses: actions/setup-java@v4
+        with:
+        java-version: '17'
+        distribution: 'temurin'
+    - run: mvn verify
