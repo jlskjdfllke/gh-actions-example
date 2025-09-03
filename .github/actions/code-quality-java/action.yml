@@ -2,10 +2,9 @@ name: Code quality
 description: A GitHub Action for checking Java code quality
 
 inputs:
-  who-to-greet: # id of input
-    description: Who to greet
+  pom_path:
+    description: where the pom.xml is located
     required: true
-    default: World
 
 runs:
   using: "composite"
@@ -18,7 +17,7 @@ runs:
         distribution: "temurin"
     - name: execute checkstyle
       shell: bash
-      run: mvn checkstyle:check
+      run: mvn -f ${{ inputs.pom_path }} checkstyle:check
     - name: run unit tests
       shell: bash
-      run: mvn test
+      run: mvn -f ${{ inputs.pom_path }} test

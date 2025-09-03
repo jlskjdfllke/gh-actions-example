@@ -4,11 +4,8 @@ on: workflow_dispatch
 jobs:
   the-job:
     runs-on: ubuntu-latest
-    defaults: 
-        run:
-            working-directory: java-app
     steps:
       - uses: actions/checkout@v5
       - uses: ./.github/actions/code-quality-java
         with:
-          who-to-greet: "World"
+          pom_path: "java-app/pom.xml"
