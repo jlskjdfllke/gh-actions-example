@@ -1,0 +1,13 @@
+name: Commenting a PR
+run-name: ${{ github.actor }} is 🚀
+on: [pull_request]
+jobs:
+  Commenting-a-PR:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "this is my first test"
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            Hello world ! :wave:
