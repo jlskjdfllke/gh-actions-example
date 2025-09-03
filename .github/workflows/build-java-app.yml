@@ -5,5 +5,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - run: cd java-app
-      - run: mvnw clean package
+        - run: pwd
+        - run: ls -l
+        - run: cd java-app
+        - run: mvnw clean package
